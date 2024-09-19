@@ -1,17 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for routing
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav
-      className="navbar navbar-expand-lg border-bottom"
-      style={{ backgroundColor: "#007bff" }} // Blue background color
-    >
+    <nav className="navbar navbar-expand-lg navbar-light border-bottom" style={{ backgroundColor: "#007bff" }}>
       <div className="container-fluid p-2 d-flex justify-content-between">
-        {/* Pushes the title to the far left */}
-        <h1 className="navbar-brand text-white"></h1>
+        {/* Logo or Title on the Left */}
+        <h1 className="navbar-brand text-white">Disaster App</h1>
 
-        {/* Pushes the buttons to the far right */}
+        {/* Toggle Button for Mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -23,29 +20,31 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
+        {/* Collapsible Navbar Links */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active text-white me-3" aria-current="page" to="/">
+              <Link className="nav-link active text-white" aria-current="page" to="/">
                 Home
               </Link>
             </li>
-            <li className="nav-item me-3">
+            <li className="nav-item">
               <Link className="nav-link active text-white" to="/dashboard">
                 Dashboard
               </Link>
             </li>
-            <li className="nav-item me-3">
+            <li className="nav-item">
               <Link className="nav-link active text-white" to="/flood">
                 Flood
               </Link>
             </li>
-            <li className="nav-item me-3">
+            <li className="nav-item">
               <Link className="nav-link active text-white" to="/landslide">
                 Landslide
               </Link>
             </li>
-            <li className="nav-item me-3">
+            <li className="nav-item">
               <Link className="nav-link active text-white" to="/earthquake">
                 Earthquake
               </Link>
