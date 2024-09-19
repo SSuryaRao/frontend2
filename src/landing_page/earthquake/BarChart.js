@@ -11,8 +11,8 @@ const BarChart = ({ data }) => {
             {
                 label: 'Magnitude',
                 data: data.map(item => item['Magnitude']),
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(139, 0, 0, 0.2)',  // Dark red with transparency
+                borderColor: 'rgba(139, 0, 0, 1)',        // Solid dark red
                 borderWidth: 1,
             },
         ],

@@ -3,6 +3,7 @@ import Papa from "papaparse";
 import BarChart from "./BarChart"; // Path to BarChart component
 
 import MapComponent from "./MapComponent"; // Path to MapComponent
+import LineChart from "./LineChart";
 
 const Hero3 = () => {
   const [data, setData] = useState([]);
@@ -33,6 +34,9 @@ const Hero3 = () => {
           <MapComponent data={data} />
         </div>
         <div className="col-1"></div>
+      </div>
+      <div className="row">
+          <LineChart />
       </div>
     </div>
   );

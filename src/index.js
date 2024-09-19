@@ -12,6 +12,7 @@ import Hero3 from './landing_page/landslide/Hero3';
 import Hero4 from './landing_page/helpline/Hero4';
 import NotFound from './landing_page/NotFound';
 import App from './App';
+import Footer from './landing_page/home/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -31,6 +32,7 @@ root.render(
         <Route path="*" element={<NotFound />} />
         {/* Add more routes here as needed */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );

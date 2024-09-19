@@ -7,7 +7,7 @@ function Home_page() {
         <div>
         
         <Hero />
-        <Footer />
+        
         </div>
      );
 }
