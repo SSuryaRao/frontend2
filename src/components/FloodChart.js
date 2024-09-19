@@ -19,7 +19,7 @@ function FloodChart() {
 
   useEffect(() => {
     // Fetch flood data from backend
-    axios.get('http://localhost:5000/api/flood-data')
+    axios.get('https://disasterapp-backend.onrender.com/api/flood-data')
       .then((response) => {
         console.log('Flood Data:', response.data);  // Debugging line
         setFloodData(response.data);

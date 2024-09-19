@@ -4,7 +4,7 @@ import axios from 'axios';
 function RunScriptButton() {
   const runScript = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/run-script');
+      const response = await axios.post('https://disasterapp-backend.onrender.com/run-script');
       alert(response.data);
     } catch (error) {
       alert(`Error: ${error.message}`);
