@@ -87,36 +87,45 @@ const disasterDataIndia = [
   }
 ];
 
+// Function to get color based on risk level
 const getColor = (risk) => {
-  return risk > 0.8 ? "red" : risk > 0.6 ? "orange" : risk > 0.4 ? "yellow" : "green";
+  if (risk >= 0.75) return "darkred";
+  if (risk >= 0.5) return "orange";
+  return "green";
 };
 
 function IndiaDisasterMap() {
   return (
-    <MapContainer center={[22.9734, 78.6569]} zoom={5} style={{ height: "800px", width: "900px" }}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      {disasterDataIndia.map((data, index) => (
-        <Circle
-          key={index}
-          center={[data.lat, data.lng]}
-          radius={data.risk * 50000}  // Adjust radius for visualization
-          color={getColor(data.risk)}
-        >
-          <Popup>
-            <strong>{data.location}</strong>
-            <br />
-            Disaster Type: {data.disaster_type}
-            <br />
-            Disaster Risk: {data.risk * 100}%
-            <br />
-            Notes: {data.notes}
-          </Popup>
-        </Circle>
-      ))}
-    </MapContainer>
+    <div style={{ width: "100%", height: "100%" }}> {/* Container to make map responsive */}
+      <MapContainer
+        center={[22.9734, 78.6569]}
+        zoom={5}
+        style={{ height: "60vh", width: "100vw" }} // Responsive dimensions
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        {disasterDataIndia.map((data, index) => (
+          <Circle
+            key={index}
+            center={[data.lat, data.lng]}
+            radius={data.risk * 50000} // Adjust radius for visualization
+            color={getColor(data.risk)}
+          >
+            <Popup>
+              <strong>{data.location}</strong>
+              <br />
+              Disaster Type: {data.disaster_type}
+              <br />
+              Disaster Risk: {data.risk * 100}%
+              <br />
+              Notes: {data.notes}
+            </Popup>
+          </Circle>
+        ))}
+      </MapContainer>
+    </div>
   );
 }
 

@@ -1,16 +1,51 @@
-/* Hero.css */
+/* Adjust the container and rows for responsiveness */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+/* Responsive design for different screen sizes */
+@media (max-width: 768px) {
+    .news-container {
+        height: 400px; /* Adjust for smaller screens */
+        max-width: 100%; /* Ensure it fits within the screen */
+    }
+    .hero-background {
+        height: 80vh; /* Reduce height for smaller screens */
+    }
+    .marquee-content {
+        font-size: 1rem; /* Reduce font size on small screens */
+    }
+    .col-6 {
+        width: 100%; /* Stack columns on top of each other */
+        text-align: center;
+    }
+    .hero-content {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .news-container {
+        height: 600px; /* Default height for larger screens */
+        max-width: 800px; /* Keep max-width on larger screens */
+    }
+    .hero-background {
+        height: 100vh; /* Full viewport height */
+    }
+}
+
 .news-container {
     width: 100%;
-    max-width: 800px; /* Adjust as needed */
-    border: 2px solid #ccc; /* Soft border for modern look */
+    border: 2px solid #ccc;
     padding: 10px;
     margin: 20px auto;
-    background-color: #ffffff; /* Clean white background */
+    background-color: #ffffff;
     position: relative;
-    overflow: hidden; /* To hide the overflowing text */
-    height: 600px; /* Adjust as needed */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow: hidden;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .marquee {
@@ -27,55 +62,54 @@
     height: 100%;
     width: 100%;
     animation: marquee 20s linear infinite;
-    font-size: 1.2rem; /* Slightly smaller for a more elegant look */
-    line-height: 1.6; /* Better readability */
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 .marquee-content a {
     display: block;
-    padding: 10px 15px; /* Added padding for a better touch */
+    padding: 10px 15px;
     text-decoration: none;
-    background-color: #e0f7fa; /* Light cyan background */
-    color: #00695c; /* Slightly darker blue for better readability */
-    border-radius: 5px; /* Rounded corners for links */
-    margin: 5px 0; /* Spacing between items */
-    transition: background 0.3s, color 0.3s; /* Smooth transition on hover */
+    background-color: #e0f7fa;
+    color: #00695c;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background 0.3s, color 0.3s;
 }
 
 .marquee-content a:hover {
-    background-color: #004d40; /* Darker teal on hover */
-    color: #ffeb3b; /* White text on hover for contrast */
+    background-color: #004d40;
+    color: #ffeb3b;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateY(0%); /* Start above the container */
+        transform: translateY(0%);
     }
     100% {
-        transform: translateY(-100%); /* End below the container */
+        transform: translateY(-100%);
     }
 }
 
-/* Hero.css */
 .hero-background {
     background-image: url('./cyclone_img.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     position: relative;
-    color: white; /* White text color for contrast */
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Center text */
+    text-align: center;
 }
 
 .hero-content {
     padding: 20px;
     box-sizing: border-box;
-    /* Semi-transparent background for better readability */
-    border-radius: 10px; /* Rounded corners */
-    color: #ffffff; /* White text color */
-    max-width: 80%; /* Responsive width */
+    
+    border-radius: 10px;
+    color: #ffffff;
+    max-width: 80%;
 }
