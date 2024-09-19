@@ -9,10 +9,10 @@ function Hero() {
         <div className="container mt-4 mb-5">
           <div className="row">
             <div className="col-6 mb-5">
-              <h1 className="text-warning">News Headlines</h1>
+              <h1 className="text-primary">News Headlines</h1>
               <div className="news-container">
                 <div className="marquee">
-                  <div className="marquee-content text-primary">
+                  <div className="marquee-content">
                     <a href="https://timesofindia.indiatimes.com/india/govt-launches-programme-to-tackle-glacial-lake-outburst-flood-threat-in-himalayas-all-190-high-risk-lakes-to-be-monitored/articleshow/113401592.cms">
                       Govt launches programme to tackle glacial lake outburst
                       flood threat in Himalayas

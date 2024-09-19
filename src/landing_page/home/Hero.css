@@ -2,13 +2,15 @@
 .news-container {
     width: 100%;
     max-width: 800px; /* Adjust as needed */
-    border: 2px solid #000; /* Rectangle box border */
+    border: 2px solid #ccc; /* Soft border for modern look */
     padding: 10px;
     margin: 20px auto;
-    background-color: #f9f9f9;
+    background-color: #ffffff; /* Clean white background */
     position: relative;
     overflow: hidden; /* To hide the overflowing text */
     height: 600px; /* Adjust as needed */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 .marquee {
@@ -25,13 +27,24 @@
     height: 100%;
     width: 100%;
     animation: marquee 20s linear infinite;
+    font-size: 1.2rem; /* Slightly smaller for a more elegant look */
+    line-height: 1.6; /* Better readability */
 }
 
 .marquee-content a {
     display: block;
-    padding: 10px 0;
+    padding: 10px 15px; /* Added padding for a better touch */
     text-decoration: none;
-    color: rgb(0, 119, 255); /* Adjust text color as needed */
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #00695c; /* Slightly darker blue for better readability */
+    border-radius: 5px; /* Rounded corners for links */
+    margin: 5px 0; /* Spacing between items */
+    transition: background 0.3s, color 0.3s; /* Smooth transition on hover */
+}
+
+.marquee-content a:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    color: #ffeb3b; /* White text on hover for contrast */
 }
 
 @keyframes marquee {
@@ -43,37 +56,26 @@
     }
 }
 
-/* Additional styling to ensure smooth scrolling */
-.news-container .marquee-content::after {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-
 /* Hero.css */
 .hero-background {
     background-image: url('./cyclone_img.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Adjust based on your requirements */
+    height: 100vh; /* Full viewport height */
     position: relative;
-    color: white; /* Optional: Adjust text color for better readability */
-  }
-  
-  .hero-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+    color: white; /* White text color for contrast */
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-  }
-  
-  
+    text-align: center; /* Center text */
+}
+
+.hero-content {
+    padding: 20px;
+    box-sizing: border-box;
+    /* Semi-transparent background for better readability */
+    border-radius: 10px; /* Rounded corners */
+    color: #ffffff; /* White text color */
+    max-width: 80%; /* Responsive width */
+}
