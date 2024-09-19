@@ -8,7 +8,7 @@ function Graphbar() {
   // Load CSV data using PapaParse
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("media/csvfiles/Disaster.csv");
+      const response = await fetch("/media/csvfiles/Disaster.csv"); // Adjusted path
       const reader = response.body.getReader();
       const result = await reader.read(); // raw array
       const decoder = new TextDecoder("utf-8");
@@ -34,8 +34,8 @@ function Graphbar() {
 
   return (
     <div className="container mt-5">
-      <div className="row ">
-        <div className="col-6">
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center mb-4">
           {/* Line chart: Total deaths over the years */}
           <Plot
             data={[
@@ -47,9 +47,13 @@ function Graphbar() {
                 marker: { color: "red" },
               },
             ]}
-            layout={{ title: "Total Deaths Over Time" }}
+            layout={{ title: "Total Deaths Over Time", autosize: true }}
+            style={{ width: "100%", height: "400px" }}
           />
-
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center mb-4">
           {/* Bar chart: Total deaths by Disaster Type */}
           <Plot
             data={[
@@ -66,13 +70,14 @@ function Graphbar() {
                 type: "bar",
               },
             ]}
-            layout={{ title: "Total Deaths by Disaster Type" }}
+            layout={{ title: "Total Deaths by Disaster Type", autosize: true }}
+            style={{ width: "100%", height: "400px" }}
           />
-
-          
         </div>
-        <div className="col-6">
-            {/* Pie chart: Total deaths by Continent */}
+      </div>
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center">
+          {/* Pie chart: Total deaths by Continent */}
           <Plot
             data={[
               {
@@ -83,7 +88,8 @@ function Graphbar() {
                 insidetextorientation: "radial", // Ensures text is readable
               },
             ]}
-            layout={{ title: "Total Deaths by Continent" }}
+            layout={{ title: "Total Deaths by Continent", autosize: true }}
+            style={{ width: "100%", height: "600px" }}
           />
         </div>
       </div>

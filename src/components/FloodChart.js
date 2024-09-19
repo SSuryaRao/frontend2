@@ -52,68 +52,88 @@ function FloodChart() {
   const eventCounts = yearLabels.map(year => floodEventsByYear[year]);
 
   return (
-    <div>
-      <h2>Flood Data Visualization</h2>
-
+    <div className="container mt-5">
       {/* Histogram of Flood Duration */}
-      <h3>Distribution of Flood Duration</h3>
-      <Plot
-        data={[
-          {
-            x: floodData.map(row => parseFloat(row['Duration(Days)'])),
-            type: 'histogram',
-            nbinsx: 20,
-          }
-        ]}
-        layout={{
-          title: 'Distribution of Flood Duration',
-          xaxis: { title: 'Duration (Days)' },
-          yaxis: { title: 'Count' }
-        }}
-      />
+      <div className="row mb-4">
+        <div className="col-12 d-flex justify-content-center">
+          <div>
+            <h3>Distribution of Flood Duration</h3>
+            <Plot
+              data={[
+                {
+                  x: floodData.map(row => parseFloat(row['Duration(Days)'])),
+                  type: 'histogram',
+                  nbinsx: 20,
+                }
+              ]}
+              layout={{
+                title: 'Distribution of Flood Duration',
+                xaxis: { title: 'Duration (Days)' },
+                yaxis: { title: 'Count' },
+                autosize: true
+              }}
+              style={{ width: "800px", height: "400px" }}
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Bar chart of Flood Events by Year */}
-      <h3>Flood Events by Year</h3>
-      {yearLabels.length > 0 ? (
-        <Plot
-          data={[
-            {
-              x: yearLabels,
-              y: eventCounts,
-              type: 'bar',
-            }
-          ]}
-          layout={{
-            title: 'Flood Events by Year',
-            xaxis: { title: 'Year' },
-            yaxis: { title: 'Event Count' },
-          }}
-        />
-      ) : (
-        <p>No data available for Flood Events by Year.</p>
-      )}
+      <div className="row mb-4">
+        <div className="col-12 d-flex justify-content-center">
+          <div>
+            <h3>Flood Events by Year</h3>
+            {yearLabels.length > 0 ? (
+              <Plot
+                data={[
+                  {
+                    x: yearLabels,
+                    y: eventCounts,
+                    type: 'bar',
+                  }
+                ]}
+                layout={{
+                  title: 'Flood Events by Year',
+                  xaxis: { title: 'Year' },
+                  yaxis: { title: 'Event Count' },
+                  autosize: true
+                }}
+                style={{ width: "800px", height: "400px" }}
+              />
+            ) : (
+              <p>No data available for Flood Events by Year.</p>
+            )}
+          </div>
+        </div>
+      </div>
 
       {/* Map of Flood Locations */}
-      <h3>Flood Locations Map</h3>
-      <MapContainer center={[22, 78]} zoom={5} style={{ height: "800px", width: "100%" }}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
-        {floodData.map((row, index) => (
-          <Marker key={index} position={[parseFloat(row['Latitude']), parseFloat(row['Longitude'])]}>
-            <Popup>
-              <div>
-                <strong>Location:</strong> {row['Location']}<br/>
-                <strong>Districts:</strong> {row['Districts']}<br/>
-                <strong>Severity:</strong> {row['Severity']}<br/>
-                <strong>Human Fatality:</strong> {row['Human fatality']}<br/>
-                <strong>Area Affected:</strong> {row['Area Affected']}
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center">
+          <div>
+            <h3>Flood Locations Map</h3>
+            <MapContainer center={[22, 78]} zoom={5} style={{ height: "800px", width: "900px" }}>
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              />
+              {floodData.map((row, index) => (
+                <Marker key={index} position={[parseFloat(row['Latitude']), parseFloat(row['Longitude'])]}>
+                  <Popup>
+                    <div>
+                      <strong>Location:</strong> {row['Location']}<br/>
+                      <strong>Districts:</strong> {row['Districts']}<br/>
+                      <strong>Severity:</strong> {row['Severity']}<br/>
+                      <strong>Human Fatality:</strong> {row['Human fatality']}<br/>
+                      <strong>Area Affected:</strong> {row['Area Affected']}
+                    </div>
+                  </Popup>
+                </Marker>
+              ))}
+            </MapContainer>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

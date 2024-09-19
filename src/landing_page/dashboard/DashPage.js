@@ -10,11 +10,12 @@ function DashPage() {
         <Mapbar />
         </div>
         <div className="row mt-5">
-        <Graphbar />
+            <Heatmap />
         </div>
         <div className="row mt-5">
         
-            <Heatmap />
+            
+            <Graphbar />
       
         </div>
       

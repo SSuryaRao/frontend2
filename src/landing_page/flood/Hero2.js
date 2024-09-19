@@ -11,7 +11,10 @@ function Hero2() {
                  
             </div>
             <div className='row mt-5'>
-                <Heatmap />
+                <div className="col-12 d-flex justify-content-center">
+                    <Heatmap />
+                </div>
+                
             </div>
         </div>
      );

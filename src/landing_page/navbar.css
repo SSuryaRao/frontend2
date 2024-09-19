@@ -1,0 +1,13 @@
+/* Navbar custom styles (Optional) */
+.navbar-light .navbar-nav .nav-link {
+    color: #f8f9fa; /* Light text color for nav links */
+  }
+  
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #ffc107; /* Highlight color for active link */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #f8f9fa; /* Toggler icon color */
+  }
+
