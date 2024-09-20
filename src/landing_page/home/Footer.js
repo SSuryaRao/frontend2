@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -17,23 +18,30 @@ function Footer() {
 
           {/* Center-aligned: Quick links */}
           <div className="col-md-4 text-center">
-            <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li><a href="#" className="text-white">Home</a></li>
-              <li><a href="#" className="text-white">Dashboard</a></li>
-              <li><a href="#" className="text-white">Helpline</a></li>
-              <li><a href="#" className="text-white">Contact Us</a></li>
-            </ul>
+            
           </div>
 
           {/* Right-aligned: Contact information */}
           <div className="col-md-4 d-flex justify-content-end">
             <div className="text-end">
-              <h5>Contact Us</h5>
-              <p>
-                Email: info@disasterportal.com<br />
-                Phone: +1 234 567 890
-              </p>
+            <h5>Quick Links</h5>
+            <ul className="list-unstyled">
+              <li>
+              <Link className="nav-link active text-light text-decoration-underline" aria-current="page" to="/">
+                Home
+              </Link>
+              </li>
+              <li>
+              <Link className="nav-link active text-light text-decoration-underline" to="/dashboard">
+                Dashboard
+              </Link>
+              </li>
+              <li>
+              <Link className="nav-link active text-light text-decoration-underline" to="/helpline">
+                Helpline
+              </Link>
+              </li>
+            </ul>
             </div>
           </div>
         </div>

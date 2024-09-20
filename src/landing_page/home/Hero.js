@@ -1,30 +1,21 @@
 import React from "react";
 import IndiaDisasterMap from "../../components/IndiaDisasterMap";
 import "./Hero.css"; // Import the CSS file
+import cycloneImg from './cyclone_img.jpg';
+
 
 function Hero() {
   return (
-    <div className="hero-background">
-      <div className="hero-content">
-        <div className="container mt-4 mb-5">
-          <div className="row mb-5 mt-5">
-
-          </div>
-          <div className="row mb-5 mt-5">
-
-          </div>
-          <div className="row mb-5 mt-5">
-
-          </div>
-          <div className="row mb-5 mt-5">
-
-          </div>
-          <div className="row mb-5 mt-5">
-
-          </div>
-          <div className="row mb-5 mt-5">
-
-          </div>
+    
+    <div className="container mt-4 mb-5" style={{ 
+      backgroundImage: `url(${cycloneImg})`, 
+      backgroundSize: 'cover', 
+      backgroundPosition: 'center', 
+      backgroundRepeat: 'no-repeat',
+      height: '100vh', 
+      width: '100%',
+   }}>
+          
           <div className="row ">
             {/* News Headlines section */}
             <div className="col-lg-6 col-md-12 mb-5 ">
@@ -94,8 +85,7 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      
   );
 }
 
