@@ -13,6 +13,12 @@ function Hero() {
           <div className="row mb-5 mt-5">
 
           </div>
+          <div className="row mb-5 mt-5">
+
+          </div>
+          <div className="row mb-5 mt-5">
+
+</div>
           <div className="row ">
             {/* News Headlines section */}
             <div className="col-lg-6 col-md-12 mb-5 ">
