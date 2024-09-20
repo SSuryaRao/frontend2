@@ -15,7 +15,7 @@ function Hero() {
           </div>
           <div className="row ">
             {/* News Headlines section */}
-            <div className="col-lg-6 col-md-6 mb-5 ">
+            <div className="col-lg-6 col-md-12 mb-5 ">
               <h1 className="text-primary mt-5">News Headlines</h1>
               <div className="news-container mt-2">
                 <div className="marquee">
@@ -77,7 +77,7 @@ function Hero() {
             </div>
 
             {/* Disaster Map section */}
-            <div className="col-lg-6 col-md-6 mt-5 mb-5 text-md-start text-lg-end">
+            <div className="col-lg-6 col-md-12 mt-5 mb-5 text-md-start text-lg-end">
               <IndiaDisasterMap />
             </div>
           </div>
