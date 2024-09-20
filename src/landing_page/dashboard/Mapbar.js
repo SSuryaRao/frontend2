@@ -3,7 +3,7 @@ import React from "react";
 function Mapbar() {
   return (
     <div className="container mt-5">
-      <h1 className="$teal-600">Disaster Map</h1>
+      <h1 className="text-primary display-4 font-italic">Disaster Map</h1>
       <div className="map-container ">
         <iframe
           src="/map.html"

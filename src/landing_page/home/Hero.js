@@ -38,6 +38,7 @@ function Hero() {
                       Cloudburst in Himachal Pradesh: Death toll mounts to six;
                       47 people still missing
                     </a>
+                    
                     {/* Add more news items as necessary */}
                   </div>
                 </div>

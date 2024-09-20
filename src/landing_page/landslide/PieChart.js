@@ -45,7 +45,7 @@ const PieChart = ({ data }) => {
 
     return (
         <div>
-            <h2>Landslide Categories</h2>
+            <h1 className='text-primary mb-3 display-4 font-italic'>Landslide Categories</h1>
             <Pie data={pieData} options={options} />
         </div>
     );

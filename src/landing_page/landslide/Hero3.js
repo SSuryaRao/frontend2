@@ -51,9 +51,12 @@ function Hero3() {
 
     return (
         <div className='container'>
-            <div className='row mb-5'>
-                <h1>Landslide Events</h1>
-                <IndiaDisasterMap data={data} />
+            <div className='row mb-5 mt-5'>
+                <h1 className='text-primary text-center display-4 font-italic'>Landslide Events</h1>
+                <div className='col-12 col-lg-10 offset-lg-1 mt-3'>
+                    <IndiaDisasterMap data={data} />
+                </div>
+                
             </div>
             <div className='row mt-5 justify-content-center'> {/* Center the content */}
                 <div className='col-md-6 text-center'> {/* Set width and center-align text */}

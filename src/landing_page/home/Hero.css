@@ -7,7 +7,7 @@
 /* Responsive design for different screen sizes */
 @media (max-width: 768px) {
     .news-container {
-        height: 400px; /* Adjust height for mobile */
+        height: 40vh; /* Adjust height for mobile using viewport units */
     }
     .hero-background {
         height: 80vh; /* Reduce hero section height for mobile */
@@ -20,12 +20,13 @@
     }
     .hero-content {
         padding: 10px; /* Smaller padding on mobile */
+        margin-bottom: 20px; /* Add margin-bottom to create more spacing */
     }
 }
 
 @media (min-width: 769px) {
     .news-container {
-        height: 600px; /* Default height for larger screens */
+        height: 60vh; /* Default height for larger screens using vh units */
         max-width: 800px; /* Limit width on larger screens */
     }
     .hero-background {
@@ -42,17 +43,16 @@
     background-color: #ffffff;
     position: relative;
     overflow: hidden;
-    height: 100%;
+    height: 100%; /* Ensure the container fits its parent */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Marquee section */
 .marquee {
-    position: relative; /* Changed from absolute to relative for better positioning */
+    position: relative;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 100%; /* Ensure marquee container height stays fixed */
+    overflow: hidden; /* Prevent content overflow */
     box-sizing: border-box;
 }
 
@@ -60,11 +60,11 @@
 .marquee-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Ensures content flows from the top */
-    height: 100%;
+    justify-content: flex-start;
+    height: auto; /* Let the content adjust naturally */
     width: 100%;
-    animation: marquee 15s linear infinite; /* Adjusted for smoother scrolling */
-    font-size: 1rem; /* Adjusted font size for better readability */
+    animation: marquee 20s linear infinite; /* Scrolling animation */
+    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -116,6 +116,7 @@
     border-radius: 10px;
     color: #ffffff;
     max-width: 80%;
+    margin-bottom: 20px; /* Add margin-bottom for better spacing */
 }
 
 /* Adding Bootstrap classes */

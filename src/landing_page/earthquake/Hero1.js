@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import BarChart from "./BarChart"; // Path to BarChart component
-
 import MapComponent from "./MapComponent"; // Path to MapComponent
 import LineChart from "./LineChart";
 
@@ -20,23 +19,21 @@ const Hero3 = () => {
   }, []);
 
   return (
-    <div className="conatiner">
+    <div className="container"> {/* Corrected class name */}
       <div className="row mb-5">
-        <div className="col-3"></div>
-        <div className="col-6">
+        <div className="col-12 col-lg-10 offset-lg-1 justify-content-center">
           <BarChart data={data} />
         </div>
-        <div className="col-1"></div>
       </div>
       <div className="row mt-5">
-        <div className="col-3"></div>
-        <div className="col-6 mt-5">
+        <div className="col-12 col-lg-10 offset-lg-1 mt-5">
           <MapComponent data={data} />
         </div>
-        <div className="col-1"></div>
       </div>
-      <div className="row">
+      <div className="row mt-5">
+        <div className="col-12">
           <LineChart />
+        </div>
       </div>
     </div>
   );
