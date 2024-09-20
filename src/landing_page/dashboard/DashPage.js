@@ -15,7 +15,23 @@ function DashPage() {
         {/* Heatmap Section */}
         
         <div className="col-12 col-lg-10 offset-lg-1 mt-5">
-        <h1 className="text-danger display-4 font-italic mb-3 ">HeatMap</h1>
+        <h1
+        style={{
+          color: "#333333" /* Dark grey for clean contrast */,
+          fontSize: "2.5rem" /* Large font size for impact */,
+          fontWeight: "bold" /* Bold text */,
+          textAlign: "center" /* Center alignment */,
+          background:
+            "linear-gradient(90deg, #D91E18, #F39C12)" /* Red-to-orange gradient fill */,
+          WebkitBackgroundClip: "text" /* Clips background to text */,
+          WebkitTextFillColor: "transparent" /* Makes the gradient visible */,
+          letterSpacing: "1px" /* Slightly spaced letters for clarity */,
+           
+          borderBottom: '1px solid #D91E18',
+        }}
+      >
+        HeatMap
+      </h1>
           <Heatmap />
         </div>
 

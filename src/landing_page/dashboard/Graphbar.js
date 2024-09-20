@@ -47,7 +47,18 @@ function Graphbar() {
                 marker: { color: "red" },
               },
             ]}
-            layout={{ title: "Total Deaths Over Time", autosize: true }}
+            layout={{
+              title: {
+                text: "Total Deaths Over Time",
+                font: {
+                  color: '#1E88E5', /* Change to any color, here it's bold blue */
+                  size: 24, /* Adjust the font size */
+                  family: 'Arial, sans-serif' /* Font family */
+                }
+              },
+              autosize: true
+            }}
+            
             style={{ width: "100%", height: "400px" }}
           />
         </div>
@@ -70,7 +81,18 @@ function Graphbar() {
                 type: "bar",
               },
             ]}
-            layout={{ title: "Total Deaths by Disaster Type", autosize: true }}
+           
+            layout={{
+              title: {
+                text: "Total Deaths by Disaster Type",
+                font: {
+                  color: 'red', /* Change to any color, here it's bold blue */
+                  size: 24, /* Adjust the font size */
+                  family: 'Arial, sans-serif' /* Font family */
+                }
+              },
+              autosize: true
+            }}
             style={{ width: "100%", height: "400px" }}
           />
         </div>
@@ -88,7 +110,17 @@ function Graphbar() {
                 insidetextorientation: "radial", // Ensures text is readable
               },
             ]}
-            layout={{ title: "Total Deaths by Continent", autosize: true }}
+            layout={{
+              title: {
+                text: "Total Deaths by Continent",
+                font: {
+                  color: '#1E88E5', /* Change to any color, here it's bold blue */
+                  size: 24, /* Adjust the font size */
+                  family: 'Arial, sans-serif' /* Font family */
+                }
+              },
+              autosize: true
+            }}
             style={{ width: "100%", height: "600px" }}
           />
         </div>
