@@ -1,4 +1,4 @@
-/* Adjust the container and rows for responsiveness */
+/* Bootstrap container adjustments for responsiveness */
 .container {
     max-width: 100%;
     padding: 0 15px;
@@ -7,34 +7,33 @@
 /* Responsive design for different screen sizes */
 @media (max-width: 768px) {
     .news-container {
-        height: 400px; /* Adjust for smaller screens */
-        max-width: 100%; /* Ensure it fits within the screen */
+        height: 400px; /* Adjust height for mobile */
     }
     .hero-background {
-        height: 80vh; /* Reduce height for smaller screens */
+        height: 80vh; /* Reduce hero section height for mobile */
     }
     .marquee-content {
-        font-size: 1rem; /* Reduce font size on small screens */
+        font-size: 1rem; /* Smaller text for mobile */
     }
     .col-6 {
-        width: 100%; /* Stack columns on top of each other */
-        text-align: center;
+        width: 100%; /* Stack columns vertically */
     }
     .hero-content {
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 10px; /* Smaller padding on mobile */
     }
 }
 
 @media (min-width: 769px) {
     .news-container {
         height: 600px; /* Default height for larger screens */
-        max-width: 800px; /* Keep max-width on larger screens */
+        max-width: 800px; /* Limit width on larger screens */
     }
     .hero-background {
-        height: 100vh; /* Full viewport height */
+        height: 100vh; /* Full viewport height on larger screens */
     }
 }
 
+/* News container styling */
 .news-container {
     width: 100%;
     border: 2px solid #ccc;
@@ -43,27 +42,30 @@
     background-color: #ffffff;
     position: relative;
     overflow: hidden;
-    height: 600px;
+    height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Marquee section */
 .marquee {
-    position: absolute;
+    position: relative; /* Changed from absolute to relative for better positioning */
     width: 100%;
     height: 100%;
     overflow: hidden;
     box-sizing: border-box;
 }
 
+/* Marquee content */
 .marquee-content {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start; /* Ensures content flows from the top */
     height: 100%;
     width: 100%;
-    animation: marquee 20s linear infinite;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    animation: marquee 15s linear infinite; /* Adjusted for smoother scrolling */
+    font-size: 1rem; /* Adjusted font size for better readability */
+    line-height: 1.5;
 }
 
 .marquee-content a {
@@ -82,6 +84,7 @@
     color: #ffeb3b;
 }
 
+/* Keyframe animation for marquee effect */
 @keyframes marquee {
     0% {
         transform: translateY(0%);
@@ -91,6 +94,7 @@
     }
 }
 
+/* Hero section background */
 .hero-background {
     background-image: url('./cyclone_img.jpg');
     background-size: cover;
@@ -105,11 +109,24 @@
     text-align: center;
 }
 
+/* Hero content adjustments */
 .hero-content {
     padding: 20px;
     box-sizing: border-box;
-    
     border-radius: 10px;
     color: #ffffff;
     max-width: 80%;
+}
+
+/* Adding Bootstrap classes */
+.hero-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.col-6 {
+    flex-basis: 50%; /* Flexbox-based column layout for better responsiveness */
 }
