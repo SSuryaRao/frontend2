@@ -26,7 +26,7 @@
 
 @media (min-width: 769px) {
     .news-container {
-        height: 60vh; /* Default height for larger screens using vh units */
+        height: 50vh; /* Default height for larger screens using vh units */
         max-width: 800px; /* Limit width on larger screens */
     }
     .hero-background {

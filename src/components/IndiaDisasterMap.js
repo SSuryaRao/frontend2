@@ -100,7 +100,7 @@ function IndiaDisasterMap() {
       <MapContainer
         center={[22.9734, 78.6569]}
         zoom={5}
-        style={{ height: "60vh", width: "40vw" }} // Responsive dimensions
+        style={{ height: "80vh", width: "40vw" }} // Responsive dimensions
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
