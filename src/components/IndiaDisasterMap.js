@@ -23,8 +23,8 @@ const disasterDataIndia = [
   },
   {
     disaster_type: "Cyclone",
-    lat: 15.3173,
-    lng: 75.7139,
+    lat: 20.4650,
+    lng: 85.8589,
     risk: 0.9,
     location: "Odisha Coast",
     notes: "High cyclone risk during pre-monsoon and post-monsoon seasons."
@@ -96,7 +96,7 @@ const getColor = (risk) => {
 
 function IndiaDisasterMap() {
   return (
-    <div style={{ width: "100%", height: "100%" }}> {/* Container to make map responsive */}
+    <div style={{ width: "90%", height: "100%" }}> {/* Container to make map responsive */}
       <MapContainer
         center={[22.9734, 78.6569]}
         zoom={5}

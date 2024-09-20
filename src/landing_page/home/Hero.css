@@ -43,7 +43,7 @@
     background-color: #ffffff;
     position: relative;
     overflow: hidden;
-    height: 100%; /* Ensure the container fits its parent */
+    height: 60%; /* Ensure the container fits its parent */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
