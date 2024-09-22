@@ -34,8 +34,8 @@ function Hero4() {
             <li><FaPhoneAlt className="me-2" /> Police Department: <strong>100</strong></li>
             <li><FaPhoneAlt className="me-2" /> NDRF: <strong>0671-2879711</strong></li>
             <li><FaPhoneAlt className="me-2" /> NDMA: <strong>011-1070</strong></li>
-            <li><a href="https://www.ndrf.gov.in/contact-us" className="text-decoration-none text-white">Contact NDRF</a></li>
-            <li><a href="https://ndma.gov.in/about-us/Contact-us" className="text-decoration-none text-white">Contact NDMA</a></li>
+            <li><a href="https://www.ndrf.gov.in/contact-us" className="text-decoration-underline text-white">Contact NDRF</a></li>
+            <li><a href="https://ndma.gov.in/about-us/Contact-us" className="text-decoration-underline text-white">Contact NDMA</a></li>
           </ul>
         </div>
       </div>
