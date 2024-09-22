@@ -57,7 +57,19 @@ function FloodChart() {
       <div className="row mb-4">
         <div className="col-12 d-flex justify-content-center">
           <div>
-            <h3>Distribution of Flood Duration</h3>
+            <h3  style={{
+          color: "#333333" /* Dark grey for clean contrast */,
+          fontSize: "2.5rem" /* Large font size for impact */,
+          fontWeight: "bold" /* Bold text */,
+          textAlign: "center" /* Center alignment */,
+          background:
+            "linear-gradient(90deg, #D91E18, #F39C12)" /* Red-to-orange gradient fill */,
+          WebkitBackgroundClip: "text" /* Clips background to text */,
+          WebkitTextFillColor: "transparent" /* Makes the gradient visible */,
+          letterSpacing: "1px" /* Slightly spaced letters for clarity */,
+           
+          borderBottom: '1px solid #D91E18',
+        }}>Distribution of Flood Duration</h3>
             <Plot
               data={[
                 {
@@ -67,7 +79,7 @@ function FloodChart() {
                 }
               ]}
               layout={{
-                title: 'Distribution of Flood Duration',
+                
                 xaxis: { title: 'Duration (Days)' },
                 yaxis: { title: 'Count' },
                 autosize: true
@@ -82,7 +94,19 @@ function FloodChart() {
       <div className="row mb-4">
         <div className="col-12 d-flex justify-content-center">
           <div>
-            <h3>Flood Events by Year</h3>
+            <h3  style={{
+          color: "#333333" /* Dark grey for clean contrast */,
+          fontSize: "2.5rem" /* Large font size for impact */,
+          fontWeight: "bold" /* Bold text */,
+          textAlign: "center" /* Center alignment */,
+          background:
+            "linear-gradient(90deg, #D91E18, #F39C12)" /* Red-to-orange gradient fill */,
+          WebkitBackgroundClip: "text" /* Clips background to text */,
+          WebkitTextFillColor: "transparent" /* Makes the gradient visible */,
+          letterSpacing: "1px" /* Slightly spaced letters for clarity */,
+           
+          borderBottom: '1px solid #D91E18',
+        }}>Flood Events by Year</h3>
             {yearLabels.length > 0 ? (
               <Plot
                 data={[
@@ -93,7 +117,7 @@ function FloodChart() {
                   }
                 ]}
                 layout={{
-                  title: 'Flood Events by Year',
+                  
                   xaxis: { title: 'Year' },
                   yaxis: { title: 'Event Count' },
                   autosize: true
@@ -111,7 +135,19 @@ function FloodChart() {
       <div className="row">
         <div className="col-12 d-flex justify-content-center">
           <div>
-            <h3>Flood Locations Map</h3>
+            <h3  style={{
+          color: "#333333" /* Dark grey for clean contrast */,
+          fontSize: "2.5rem" /* Large font size for impact */,
+          fontWeight: "bold" /* Bold text */,
+          textAlign: "center" /* Center alignment */,
+          background:
+            "linear-gradient(90deg, #D91E18, #F39C12)" /* Red-to-orange gradient fill */,
+          WebkitBackgroundClip: "text" /* Clips background to text */,
+          WebkitTextFillColor: "transparent" /* Makes the gradient visible */,
+          letterSpacing: "1px" /* Slightly spaced letters for clarity */,
+           
+          borderBottom: '1px solid #D91E18',
+        }}>Flood Locations Map</h3>
             <MapContainer center={[22, 78]} zoom={5} style={{ height: "800px", width: "900px" }}>
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

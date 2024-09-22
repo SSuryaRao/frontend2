@@ -1,13 +1,29 @@
-/* Navbar custom styles (Optional) */
 .navbar-light .navbar-nav .nav-link {
-    color: #f8f9fa; /* Light text color for nav links */
-  }
-  
-  .navbar-light .navbar-nav .nav-link.active {
-    color: #ffc107; /* Highlight color for active link */
-  }
-  
-  .navbar-toggler-icon {
-    background-color: #f8f9fa; /* Toggler icon color */
-  }
+  color: #f8f9fa; /* Light text color for nav links */
+}
 
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ffc107; /* Highlight color for active link */
+}
+
+.navbar-toggler-icon {
+  background-color: #f8f9fa; /* Toggler icon color */
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00d4ff;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
